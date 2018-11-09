@@ -1,0 +1,225 @@
+@charset "utf-8";
+@import "_mixin.scss";
+@import "_config.scss";
+
+/*-----------------------------------------------
+--メインカラム
+-----------------------------------------------*/
+
+.lay_l{
+  max-width: 1400px;
+  width: 90%;
+  margin: 0 auto;
+  text-align: left;
+  @include media(767px) {
+    width: 95%;
+  }
+}
+.lay_m{
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 auto;
+  text-align: left;
+  @include media(767px) {
+    width: 95%;
+  }
+}
+.lay_s{
+  max-width: 1040px;
+  width: 90%;
+  margin: 0 auto;
+  text-align: left;
+  @include media(767px) {
+    width: 95%;
+  }
+}
+
+/*-----------------------------------------------
+--コンテンツボックス 都度調整OK
+-----------------------------------------------*/
+
+.cont_l{
+  padding:20% 0;
+}
+.cont_m{
+  padding:10% 0;
+}
+.cont_s{
+  padding:5% 0;
+}
+.contbox_l{
+  padding:20%;
+}
+.contbox_m{
+  padding:10%;
+}
+.contbox_s{
+  padding:5%;
+}
+
+/*-----------------------------------------------
+--フォントサイズ 都度調整OK
+-----------------------------------------------*/
+
+.fz_l{
+  font-size:24px;
+  @include media(767px) {
+    font-size:20px;
+  }
+}
+.fz_m{
+  font-size:20px;
+  @include media(767px) {
+    font-size:18px;
+  }
+}
+.fz_s{
+  font-size:12px;
+  @include media(767px) {
+    font-size:10px;
+  }
+}
+
+/*-----------------------------------------------
+--段落用（レスポンシブ）
+-----------------------------------------------*/
+
+.pc{
+  display: block;
+  @include media(767px) {display: none;}
+}
+.tab{
+  display: none;
+  @include media(1040px) {display: block;}
+  @include media(767px) {display: none;}
+}
+.sp{
+  display: none;
+  @include media(767px) {display: block;}
+}
+.spmin{
+  display: none;
+  @include media(450px) {display: block;}
+}
+
+/*-----------------------------------------------
+--ホバーアクション（透過）
+-----------------------------------------------*/
+
+a{
+  display: block;
+}
+a:hover{
+  opacity: 0.8;
+}
+
+
+/*-----------------------------------------------
+--画面ローディング
+-----------------------------------------------*/
+
+
+body {
+  animation: fadeIn 2s ease 0s 1 normal;
+  -webkit-animation: fadeIn 2s ease 0s 1 normal;
+}
+
+@keyframes fadeIn {
+  0% {opacity: 0}
+  100% {opacity: 1}
+}
+
+@-webkit-keyframes fadeIn {
+  0% {opacity: 0}
+  100% {opacity: 1}
+}
+
+/*-----------------------------------------------
+--フロート
+-----------------------------------------------*/
+
+.left{
+  float:left;
+}
+.right{
+  float:right;
+}
+.clearfix:after{
+  content: "."; 
+  display: block; 
+  height: 0; 
+  font-size:0;	
+  clear: both; 
+  visibility:hidden;
+}
+
+/*-----------------------------------------------
+--Flex
+-----------------------------------------------*/
+
+.flex {
+  display:flex;
+  flex-direction:row;
+  flex-wrap:wrap;
+  justify-content:space-between;
+  align-items:stretch;
+  @include media(767px) {
+    justify-content:space-around;
+  }
+}
+.flex2 {
+  display:flex;
+  flex-direction: row-reverse;
+  flex-wrap:wrap;
+  justify-content:space-between;
+  align-items:stretch;
+  @include media(767px) {
+    justify-content:space-around;
+  }
+}
+.flex3 {
+  display:flex;
+  flex-direction: row;
+  flex-wrap:wrap;
+  justify-content:space-between;
+  align-items:stretch;
+  align-items: center;
+  @include media(767px) {
+    justify-content:space-around;
+  }
+}
+
+/*-----------------------------------------------
+--Fonts
+-----------------------------------------------*/
+
+body {
+  line-height: 1.6;
+  font-size: 16px;
+  @include media(767px) {
+    font-size: 14px;
+  }
+  word-wrap : break-word;
+  overflow-wrap : break-word;/*折り返しを綺麗にする*/
+  font-weight: normal;
+  font-family:Avenir, Verdana, Arial, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", "メイリオ", Roboto, Meiryo, sans-serif;
+  text-rendering: optimizeLegibility;/*アンチエイリアスなどフォント見やすくする*/
+  color: $base_font_color;
+  text-align: justify;/*均等に配置する*/
+}
+
+/*----游ゴシック__fontfamily---*/
+/*body {
+font-family:Avenir, Verdana, Arial, "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", "メイリオ", Roboto, Meiryo, sans-serif;
+font-weight: 500;
+}*/
+
+a, a:link, a:active, a:visited {text-decoration: none;outline: none;}
+a:hover, a:active {outline: 0;}
+
+/*-----------------------------------------------
+--fontfamily
+-----------------------------------------------*/
+.serif {
+  font-family: 'Times New Roman', '游明朝', YuMincho, 'ヒラギノ明朝 ProN W3', 'Hiragino Mincho ProN', 'HG明朝E', '小塚明朝 ProN', 'メイリオ', Meiryo, serif;
+}

@@ -1,0 +1,178 @@
+// -- /* 20150219 */ --
+@mixin media($size){
+	@media screen and (max-width : $size){
+		@content;
+	}
+}
+@mixin min_media($size){
+	@media screen and (min-width : $size){
+		@content;
+	}
+}
+
+// -- /* 2014 */ --
+
+@mixin input-placeholder {
+	&.placeholder { @content; }
+	&:-moz-placeholder { @content; }
+	&::-moz-placeholder { @content; }
+	&:-ms-input-placeholder { @content; }
+	&::-webkit-input-placeholder { @content; }
+}
+
+// -- /* 2018 ozeki */ --
+
+@mixin fz_10{
+  font-size:10px;
+}
+@mixin fz_11{
+  font-size: 11px;
+}
+
+// 上下左右中央配置
+@mixin center{
+  text-align: center;
+  position: relative;
+  top:50%;
+  -webkit-transform:translateY(-50%);
+  transform:translateY(-50%);
+}
+
+//リンクカラー生成
+
+@mixin link_color($color){
+  color:$color;
+  &:hover, &:active, &:focus{
+    color: lighten($color,20%);
+  }
+}
+
+@mixin pad_120{
+  padding:120px 0;
+  @include media(1040px) {
+    padding:100px 0;
+  }
+  @include media(767px) {
+    padding:80px 0;
+  }
+}
+@mixin pad_100{
+  padding:100px 0;
+  @include media(1040px) {
+    padding:80px 0;
+  }
+  @include media(767px) {
+    padding:60px 0;
+  }
+}
+@mixin pad_80{
+  padding:80px 0;
+  @include media(1040px) {
+    padding:70px 0;
+  }
+  @include media(767px) {
+    padding:60px 0;
+  }
+}
+@mixin pad_60{
+  padding:60px 0;
+  @include media(1040px) {
+    padding:50px 0;
+  }
+  @include media(767px) {
+    padding:40px 0;
+  }
+}
+@mixin pad_40{
+  padding:40px 0;
+  @include media(1040px) {
+    padding:30px 0;
+  }
+  @include media(767px) {
+    padding:20px 0;
+  }
+}
+@mixin pad_30{
+  padding:30px 0;
+  @include media(1040px) {
+    padding:25px 0;
+  }
+  @include media(767px) {
+    padding:15px 0;
+  }
+}
+@mixin pad_20{
+  padding:20px 0;
+}
+@mixin pad_10{
+  padding:10px 0;
+}
+
+@mixin pad_a_120{
+  padding:120px;
+  box-sizing: border-box;
+  @include media(1040px) {
+    padding:100px;
+  }
+  @include media(767px) {
+    padding:80px;
+  }
+}
+@mixin pad_a_100{
+  padding:100px;
+  box-sizing: border-box;
+  @include media(1040px) {
+    padding:80px;
+  }
+  @include media(767px) {
+    padding:60px;
+  }
+}
+@mixin pad_a_80{
+  padding:80px;
+  box-sizing: border-box;
+  @include media(1040px) {
+    padding:70px;
+  }
+  @include media(767px) {
+    padding:60px;
+  }
+}
+@mixin pad_a_60{
+  padding:60px;
+  box-sizing: border-box;
+  @include media(1040px) {
+    padding:50px;
+  }
+  @include media(767px) {
+    padding:40px;
+  }
+}
+@mixin pad_a_40{
+  padding:40px;
+  box-sizing: border-box;
+  @include media(1040px) {
+    padding:30px;
+  }
+  @include media(767px) {
+    padding:20px;
+  }
+}
+@mixin pad_a_30{
+  padding:30px;
+  box-sizing: border-box;
+  @include media(1040px) {
+    padding:25px;
+  }
+  @include media(767px) {
+    padding:15px;
+  }
+}
+@mixin pad_a_20{
+  padding:20px;
+  box-sizing: border-box;
+}
+@mixin pad_a_10{
+  padding:10px;
+  box-sizing: border-box;
+}

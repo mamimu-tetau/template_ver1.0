@@ -1,0 +1,157 @@
+@charset "utf-8";
+@import "_mixin.scss";
+@import "_config.scss";
+
+.contact{
+  background:#efefef;
+  padding:60px;
+  box-sizing: border-box;
+  h2{
+    margin-bottom:40px;
+    text-align: center;
+  }
+  .des{
+    margin-bottom:20px;
+    text-align: center;
+    @include media(767px) {
+      text-align: left;
+    }
+  }
+
+  .cont_wrap{
+    font-size:14px;
+  }
+  .cont_wrap .ttl{
+    width: 100%;
+    padding:20px 0 10px;
+    font-weight: bold;
+  }
+  .cont_wrap dl{
+    display: -webkit-flex; /* Safari */
+    display: flex;
+    -webkit-flex-direction: row; /* Safari */
+    flex-direction:         row;
+    -webkit-flex-wrap: wrap; /* Safari */
+    flex-wrap:         wrap;
+    -webkit-justify-content: space-between; /* Safari */
+    justify-content:         space-between;
+    align-items: stretch;
+  }
+  .cont_wrap dt{
+    width:30%;
+    padding:20px 10px;
+    box-sizing: border-box;
+  }
+  .cont_wrap dd{
+    width:70%;
+    padding:20px 10px;
+    box-sizing: border-box;
+  }
+  .cont_wrap dt span{
+    color:#ff0000;
+    padding-left:10px;
+    font-size: 12px;
+    box-sizing: border-box;
+  }
+  .cont_wrap input[type="text"]{
+    width:100%;
+    max-width:500px;
+    padding:10px 10px;
+    box-sizing: border-box;
+    border:1px solid #bbb;
+  }
+  .cont_wrap textarea{
+    width:100%;
+    max-width:500px;
+    padding:10px 10px;
+    box-sizing: border-box;
+    border:1px solid #bbb;
+  }
+  .cont_wrap input[type="tel"]{
+    width:100%;
+    max-width:300px;
+    padding:10px 10px;
+    box-sizing: border-box;
+    border:1px solid #bbb;
+  }
+  .cont_wrap input[type="email"]{
+    width:100%;
+    max-width:300px;
+    padding:10px 10px;
+    box-sizing: border-box;
+    border:1px solid #bbb;
+  }
+  .cont_wrap .wpcf7-list-item{
+    margin-left:20px;
+  }
+  .cont_wrap .wpcf7-list-item.first{
+    margin-left:0px;
+  }
+  .cont_wrap .p_pri{
+    box-sizing: border-box;
+    border:1px solid #aaa;
+    padding:15px;
+    text-align: center;
+  }
+  .cont_wrap .p_pri .brsp{
+    display: none;
+  }
+  .cont_wrap .p_pri .p_pri_btn{
+    margin:10px auto 0;
+  }
+  .cont_wrap .submit{
+    box-sizing: border-box;
+    width: 200px;
+    height: 60px;
+    background:#9c9c9c;
+    color: #fff;
+    line-height: 60px;
+    margin: 40px auto 0;
+    cursor: pointer;
+    text-align: center;
+  }
+  .cont_wrap .submit input{
+    background:none;
+    border: none;
+    color:#fff;
+    font-family: 'Yu Mincho Light','YuMincho','Yu Mincho','游明朝体','ヒラギノ明朝 ProN','Hiragino Mincho ProN',"Sawarabi Mincho",serif;
+    font-size:16px;
+  }
+  .cont_wrap .submit:hover{
+    opacity: 0.8;
+  }
+}
+
+@media screen and (max-width:767px){
+
+  .contact{
+    padding:40px 20px;
+    
+    .cont_wrap dt{
+      width:100%;
+      padding:20px 10px 10px;
+      box-sizing: border-box;
+    }
+    .cont_wrap dd{
+      width:100%;
+      padding:0px 10px 20px;
+      box-sizing: border-box;
+      border-top:none;
+    }
+    .cont_wrap .f_l{
+      border-bottom:none;
+    }
+
+    .cont_wrap .p_pri{
+      box-sizing: border-box;
+      padding:15px;
+      text-align: center;
+    }
+    .cont_wrap .p_pri .brsp{
+      display: block;
+    }
+    .cont_wrap .submit{
+      margin: 20px auto 0;
+    }
+  }
+}

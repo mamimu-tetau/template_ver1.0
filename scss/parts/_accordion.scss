@@ -1,0 +1,59 @@
+@charset "utf-8";
+@import "_mixin.scss";
+@import "_config.scss";
+
+.displayNone {
+  display: none;
+}
+.accordion li {
+  padding: 10px;
+}
+.accordion a {
+  display: block;
+}
+.contentWrap {
+  margin: 10px;
+  padding:20px 0;
+  ul{
+    margin-bottom:20px;
+  }
+}
+.switch {
+  cursor:pointer;
+  font-weight: bold;
+  padding:10px 40px 10px 10px;
+  font-size: 14px;
+  background: #eee;
+  border-bottom: 1px solid #ccc;
+  position: relative;
+}
+.switch:after {
+  position: absolute;
+  top: 60%;
+  right: 10px;
+  margin-top: -18px;
+  content: '>';
+  font-size: 18px;
+  font-weight: bold;
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+  -moz-transition: all, 0.25s, linear;
+  -o-transition: all, 0.25s, linear;
+  -webkit-transition: all, 0.25s, linear;
+  transition: all, 0.25s, linear;
+  font-family: sans-serif;
+  color: #FF6685;
+}
+.switch.open:after {
+  -moz-transform: translate(0, 50%);
+  -ms-transform: translate(0, 50%);
+  -webkit-transform: translate(0, 50%);
+  transform: translate(0, 50%);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  font-family: sans-serif;
+}
